@@ -7,4 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class JenisPenggunaanBangunan extends Model
 {
     protected $fillable = ["nama"];
+
+    public function rincianDataBangunans()
+    {
+        return $this->hasMany("App\Models\RincianDataBangunan");
+    }
+    
 }
